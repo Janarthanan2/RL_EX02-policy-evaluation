@@ -1,30 +1,34 @@
 # EX02 POLICY EVALUATION
+<br>
 
 ### REGISTER NUMBER :212222230051
 ### NAME: JANARTHANAN V K
+<br>
 
 ## AIM :
-
 To develop a Python program to evaluate the given policy by maximizing its cumulative reward while dealing with slippery terrain.
-
+<br>
 ## PROBLEM STATEMENT : 
 
 We are assigned with the task of creating an RL agent to solve the "Bandit Slippery Walk" problem. 
 The environment consists of Seven states representing discrete positions the agent can occupy.
 The agent must learn to navigate this environment while dealing with the challenge of slippery terrain.
 Slippery terrain introduces stochasticity in the agent's actions, making it difficult to predict the outcomes of its actions accurately.
+<br>
 
 ### States :
 
 The environment has 7 states :
 * Two Terminal States: **G**: The goal state & **H**: A hole state.
 * Five Transition states / Non-terminal States including  **S**: The starting state.
+<br>
 
 ### Actions :
 
 The agent can take two actions:
 * R -> Move right.
 * L -> Move left.
+<br>
 
 ### Transition Probabilities :
 
@@ -32,24 +36,25 @@ The transition probabilities for each action are as follows:
 * **50%** chance that the agent moves in the intended direction.
 * **33.33%** chance that the agent stays in its current state.
 * **16.66%** chance that the agent moves in the opposite direction.
+<br>
 
 ### Rewards :
 
 * The agent receives a reward of +1 for reaching the goal state (G). 
 * The agent receives a reward of 0 for all other states.
+<br>
 
 ### Graphical Representation:
-
 <img src="https://github.com/anto-richard/rl-policy-evaluation/assets/93427534/74eea05b-fd7a-4e0b-a9de-a3a124d7607a" width=50%>
+<br><br>
 
 ## POLICY EVALUATION FUNCTION :
+<br>
 
 ### Formula :
 
 ![out2](https://github.com/anto-richard/rl-policy-evaluation/assets/93427534/0fb0fe63-3a14-416e-b7fc-fdf3bcb495ba)
 
-
-###
 
 ```python
 
@@ -72,8 +77,6 @@ np.set_printoptions(suppress=True)
 random.seed(123); np.random.seed(123)
 
 ```
-
-### Reference https://github.com/mimoralea/gym-walk
 
 ```python
 
@@ -178,13 +181,6 @@ print('Reaches goal {:.2f}%. Obtains an average undiscounted return of {:.4f}.'.
       probability_success(env, pi_2, goal_state=goal_state)*100,
       mean_return(env, pi_2)))
 
-# Calculate the success probability and mean return for both policies
-success_prob_pi_1 = probability_success(env, pi_1, goal_state=goal_state)
-mean_return_pi_1 = mean_return(env, pi_1)
-
-success_prob_pi_2 = probability_success(env, pi_2, goal_state=goal_state)
-mean_return_pi_2 = mean_return(env, pi_2)
-
 ```
 
 
@@ -251,7 +247,7 @@ else:
 <img src="https://github.com/user-attachments/assets/81640a2e-62d3-4d57-8c43-7df26c3de6f5" width=50%>
 
 ### Policy-1 State-value function :
-<img src="https://github.com/user-attachments/assets/7ea96004-aec1-484c-ace7-246fd4fb3087" width=50%>
+<img src="https://github.com/user-attachments/assets/623f8b29-02f2-45ba-9461-fc582094830d" width=50%>
 
 ### the probability of success and the mean return of the first policy : 
 
@@ -261,15 +257,15 @@ else:
 <img src="https://github.com/user-attachments/assets/7282da02-63eb-4854-b9e5-bbf6f2263c44" width=50%>
 
 ### Policy-2 State-value function :
-<img src="https://github.com/user-attachments/assets/9b387beb-f557-42b3-a22b-6fe09e6a8da8" width=50%>
+<img src="https://github.com/user-attachments/assets/70da3d5f-88f4-42a1-999f-5be4b8a29caf" width=50%>
 
 ### the probability of success and the mean return of the second policy :
 <img src="https://github.com/user-attachments/assets/0240f01a-65e4-4b5f-8bc0-ccc5f136a0f1" width=50%>
 
 ### Comparing the two policies:
-<img src="https://github.com/user-attachments/assets/fd2054e0-64df-44a8-924a-de9763007d75" width=50%>
+<img src="https://github.com/user-attachments/assets/1cccaa4b-3852-4da3-b3fe-ccc789f638a7" width=50%>
 
 ## RESULT :
 
-Thus, the Given Policy has been Evaluated and Optimal Policy has been Computed using Python Programming and execcuted successfully.
+Thus, the Given Policy has been Evaluated and Optimal Policy has been Computed using Python Programming and executed successfully.
 
